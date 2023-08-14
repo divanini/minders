@@ -25,11 +25,11 @@ nav {
 
 .nav__logo {
     color: var(--neutral-white, #FFF);
-    font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 30px;
     line-height: 40px; 
     letter-spacing: 4.5px;
     cursor: pointer;
+    transition: font-size 0.3s ease;
 }
 
 .nav__links {
@@ -39,7 +39,6 @@ nav {
 
 .nav__link {
     color: var(--neutral-white, #FFF);
-    font-family: 'Schibsted Grotesk', sans-serif;
     font-size: 20px;
     line-height: 30px; 
     cursor: pointer;
@@ -105,4 +104,223 @@ nav {
       .close:hover path {
         stroke: yellow; 
       }
+}
+
+.main {
+    background: var(--neutral-black, #06050F);
+}
+
+.hero {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hero__title {
+    color: var(--neutral-white, #FFF);
+    font-size: 96px;
+    line-height: 106px; 
+}
+
+.hero__title span {
+    display: block;
+    color: var(--neutral-white-30, rgba(255, 255, 255, 0.30));
+}
+
+.hero__img {
+    display: block;
+    margin-inline: auto;
+    width: 95%;
+    margin-top: 2rem;
+}
+
+.about {
+    margin-block: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__text-wrapper {
+    padding-inline: 60px;
+    width: 50%;
+}
+
+.about__title {
+    color: var(--neutral-white-30, rgba(255, 255, 255, 0.30));
+    font-size: 50px;
+    line-height: 60px; 
+}
+
+.about__title span {
+    color: var(--neutral-white, #FFF);
+    display: block;
+}
+
+.about__text {
+    margin-top: 1.6rem;
+    color: var(--neutral-white, #FFF);
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.about__btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 14px 60px;
+    border-radius: 20px;
+    background: var(--purple, #CDA5D5);
+    color: var(--neutral-black, #06050F);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 26px; 
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.about__btn-box:hover {
+    background-color: rgb(151, 41, 173);
+    color: white
+}
+
+.about__niche-wrapper {
+    height: 50vh;
+    width: 50%; 
+    position: relative;
+    right: 140px;
+}
+
+.about__niche-1, .about__niche-2, .about__niche-3, .about__niche-4, .about__niche-5, .about__niche-6, .about__niche-7, .about__niche-8, .about__niche-9, .about__niche-10 {
+    position: absolute;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 50px;
+    padding: 15px 20px;
+} 
+
+.about__niche-1, .about__niche-2, .about__niche-3, .about__niche-8, .about__niche-9, .about__niche-10 {
+    color: var(--neutral-white-30, rgba(255, 255, 255, 0.30));
+    border: 1px solid var(--neutral-white-30, rgba(255, 255, 255, 0.30));
+}
+
+.about__niche-4, .about__niche-5, .about__niche-6 {
+    color: var(--neutral-white, #FFF);
+    border: 1px solid var(--neutral-white, #FFF);
+} 
+
+.about__niche-7 {
+    background: var(--linear, linear-gradient(304deg, #CDA5D5 0%, #FBE4FF 47.40%, #E8FE74 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid #E8FE74;
+}
+
+.about__niche-1 {
+    right: 15%;
+}
+
+.about__niche-2 {
+    right: 40%;
+    top: 8%;
+}
+
+.about__niche-3 {
+    left: 18%;
+    top: 19%;
+}
+
+.about__niche-4 {
+    top: 33%;
+    left: 50%;
+}
+
+.about__niche-5 {
+    right: 2%;
+    top: 25%;
+}
+
+.about__niche-6 {
+    left: 25%;
+    top: 48%;
+}
+
+.about__niche-7 {
+    top: 60%;
+    left: 50%;
+}
+
+.about__niche-8 {
+    right: 0%;
+    top: 53%;
+}
+
+.about__niche-9 {
+    left: 30%;
+    bottom: 10%;
+}
+
+.about__niche-10 {
+    bottom: 0;
+    left: 64%;
+}
+
+@media (max-width: 1170px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about__niche-wrapper {
+        top: 50px;
+        margin-inline: auto;
+        right: 100px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .about__text-wrapper {
+        padding-inline: 20px;
+        width: 90%;
+    }
+
+    .about__text {
+        padding-right: 100px;
+    }
+
+    .about__btn-box {
+        width: 60%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about__niche-wrapper {
+        display: none;
+    }
+
+    .about__title {
+        font-size: 40px;
+    }
+
+    .about__text-wrapper {
+        padding-inline: 0px;
+    }
+
+    .about__text {
+        padding-right: 4px;
+    }
+
+    .about__btn-box {
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 50em) {
+    .hero__title {
+        font-size: 50px;
+        line-height: 60px; 
+    }
 }
