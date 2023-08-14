@@ -198,6 +198,7 @@ nav {
     line-height: 30px;
     border-radius: 50px;
     padding: 15px 20px;
+    transition: transform 0.3s ease;
 } 
 
 .about__niche-1, .about__niche-2, .about__niche-3, .about__niche-8, .about__niche-9, .about__niche-10 {
@@ -267,6 +268,18 @@ nav {
     left: 64%;
 }
 
+.about__niche-wrapper {
+    transition: transform 0.3s ease;
+}
+  
+.about__niche-wrapper:hover {
+    transform: translate(-3%, -3%); 
+}
+  
+.about__niche-wrapper:hover .about__niche-1, .about__niche-wrapper:hover .about__niche-2, .about__niche-wrapper:hover .about__niche-3, .about__niche-wrapper:hover .about__niche-4, .about__niche-wrapper:hover .about__niche-5, .about__niche-wrapper:hover .about__niche-6, .about__niche-wrapper:hover .about__niche-7, .about__niche-wrapper:hover .about__niche-8, .about__niche-wrapper:hover .about__niche-9, .about__niche-wrapper:hover .about__niche-10 {
+    transform: translate(3%, 3%); 
+}
+
 @media (max-width: 1170px) {
     .about {
         flex-direction: column;
@@ -322,5 +335,129 @@ nav {
     .hero__title {
         font-size: 50px;
         line-height: 60px; 
+    }
+}
+
+.people {
+    background: var(--yellow, #E8FE74);
+    padding-block: 100px;
+    padding-inline: 100px;
+}
+
+.people__wrapper-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.people__title {
+    color: var(--neutral-black-40, rgba(6, 5, 15, 0.40));
+    font-size: 50px;
+    line-height: 60px; 
+}
+
+.people__title span {
+    color: var(--neutral-black, #06050F);
+    display: block
+}
+
+.people__wrapper-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.people__card {
+    position: relative;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    transition: filter 0.3s ease-in-out;
+}
+
+.people__img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 9px;
+}
+
+.people__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    border-radius: 9px;
+}
+
+.people__card:hover {
+    filter: blur(0.7px);
+}
+
+.people__card:hover .people__img {
+    filter: blur(0);
+}
+
+.people__card:hover .people__info {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.people__name-job {
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.people__name-job {
+    color: var(--neutral-white, black);
+    font-size: 19px;
+    line-height: 45px; 
+    padding-top: 20px;
+}
+
+.people__name-job span {
+    color: var(--neutral-white-50, rgba(50, 48, 48, 0.5));
+    display: block;
+}
+
+.people__about {
+    color: var(--neutral-white, black);
+    font-weight: 500;
+    line-height: 26px; 
+    font-size: 12px;
+    padding-inline: 19px;
+    text-align: left;
+}
+
+@media (max-width: 1140px) {
+    .people-item-3 {
+        display: none;
+    }
+}
+
+@media (max-width: 940px) {
+    .people__wrapper-bottom {
+        flex-direction: column;
+    }
+
+    .people__title {
+        font-size: 40px;
+        line-height: 50px;
+        padding-inline: 10px;
+    }
+
+    .people {
+        padding-inline: 10px;
+        padding-block: 40px;
     }
 }
