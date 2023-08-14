@@ -1,0 +1,108 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+.container {
+    width: min(1440px, 100%);
+    margin-inline: auto;
+    overflow-x: hidden;
+}
+
+header {
+    background: var(--neutral-black, #06050F);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+    user-select: none;
+}
+
+.nav__logo {
+    color: var(--neutral-white, #FFF);
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 30px;
+    line-height: 40px; 
+    letter-spacing: 4.5px;
+    cursor: pointer;
+}
+
+.nav__links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--neutral-white, #FFF);
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 20px;
+    line-height: 30px; 
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    background-image: linear-gradient(304deg, #CDA5D5 0%, #FBE4FF 47.40%, #E8FE74 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    nav {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 50em) {
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .is-opened {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: #06050F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__link {
+        padding: 20px;
+    }
+
+    .close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .close path {
+        transition: stroke 0.3s; 
+      }
+    
+      .close:hover path {
+        stroke: yellow; 
+      }
+}
