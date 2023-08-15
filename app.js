@@ -69,3 +69,20 @@ moreButtons.forEach((button, index) => {
         applyButton.style.boxShadow = ''; 
         applyButton.style.cursor = '';
     });
+
+    applyButton.addEventListener('click', () => {
+      let allInputsFilled = true;
+  
+      formInputs.forEach(input => {
+          if (input.value.trim() === '') {
+              allInputsFilled = false;
+          }
+      });
+  
+      if (allInputsFilled) {
+          formInputs.forEach(input => {
+              input.value = ''; 
+          });
+      }
+  });
+  
