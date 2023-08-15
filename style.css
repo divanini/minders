@@ -6,6 +6,10 @@
     user-select: none;
 }
 
+html {
+    background: var(--neutral-black, #06050F);
+}
+
 .container {
     width: min(1440px, 100%);
     margin-inline: auto;
