@@ -45,3 +45,27 @@ moreButtons.forEach((button, index) => {
   });
 });
 ;
+
+    const formInputs = document.querySelectorAll('.form-main'); 
+
+    const applyButton = document.querySelector('.form__apply'); 
+
+    applyButton.addEventListener('mouseenter', () => {
+        let allInputsFilled = true;
+
+        formInputs.forEach(input => {
+            if (input.value.trim() === '') {
+                allInputsFilled = false;
+            }
+        });
+
+        if (!allInputsFilled) {
+            applyButton.style.boxShadow = '1px 9px 44px -7px rgba(255,0,9,1)';
+            applyButton.style.cursor = 'not-allowed';
+        }
+    });
+
+    applyButton.addEventListener('mouseleave', () => {
+        applyButton.style.boxShadow = ''; 
+        applyButton.style.cursor = '';
+    });
