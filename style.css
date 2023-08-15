@@ -1,4 +1,4 @@
-*, *::before, *::after {
+*, *::before, *::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -168,7 +168,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     padding: 14px 60px;
     border-radius: 20px;
     background: var(--purple, #CDA5D5);
